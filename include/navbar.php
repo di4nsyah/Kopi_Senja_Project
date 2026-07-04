@@ -1,11 +1,20 @@
-<nav class="navbar"> 
-    <div class="logo"> 
-        <a href="index.php">Kopi Senja</a> 
-    </div> 
-    <ul> 
-        <li><a href="index.php">Home</a></li> 
-        <li><a href="menu.php">Menu</a></li> 
-        <li><a href="lokasi.php">Lokasi</a></li> 
-        <li><a href="kontak.php">Kontak</a></li> 
-    </ul> 
-</nav>
+<header class="navbar">
+    <a href="index.php" class="navbar__logo">
+        <img src="assets/img/Logo.png" alt="Logo Kopi Senja">
+        Kopi Senja
+    </a>
+
+    <button class="navbar__toggle" id="navToggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+    <nav class="navbar__links" id="navLinks">
+        <a href="#hero">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">Tentang</a>
+        <a href="#testimoni">Testimoni</a>
+        <a href="#location">Lokasi</a>
+    </nav>
+</header>
