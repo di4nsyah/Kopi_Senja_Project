@@ -123,7 +123,7 @@ require_once 'config/db.php';
                         </article>
                     <?php } 
                 } else {
-                    echo "<p>Menu belum tersedia.</p>";
+                    echo"<p>Menu belum tersedia.</p>";
                 }
                 ?>
             </div>

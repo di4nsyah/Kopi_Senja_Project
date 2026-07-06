@@ -48,9 +48,7 @@
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* --------------------------------------------------------------------------
-   2. RESET DASAR
-   -------------------------------------------------------------------------- */
+/* 2. RESET DASAR */
 *,
 *::before,
 *::after {
@@ -130,8 +128,6 @@ button:focus-visible {
   }
 }
 
-/* Label kecil di atas judul — dipakai berulang sebagai penanda konsisten,
-   dengan ikon "matahari terpotong" mini di depannya sebagai jejak logo */
 .eyebrow {
   display: inline-flex;
   align-items: center;
@@ -179,9 +175,7 @@ button:focus-visible {
   margin-inline: auto;
 }
 
-/* --------------------------------------------------------------------------
-   3. NAVBAR
-   -------------------------------------------------------------------------- */
+/* 3. NAVBAR */
 .navbar {
   position: fixed;
   inset-inline: 0;
@@ -266,12 +260,7 @@ button:focus-visible {
   padding: 10px 22px;
 }
 
-/* --------------------------------------------------------------------------
-   4. TOMBOL / CTA
-   Bentuk pill dipertahankan (echo dari lingkaran logo), tapi tipografi
-   sengaja tidak all-caps tebal — supaya tidak terasa seperti tombol SaaS
-   generik. Hover hanya mengubah warna, tidak ada transform.
-   -------------------------------------------------------------------------- */
+/* 4. TOMBOL / CTA */
 .btn {
   display: inline-block;
   font-family: var(--font-body);
@@ -325,9 +314,7 @@ button:focus-visible {
   color: var(--color-surface);
 }
 
-/* --------------------------------------------------------------------------
-   5. HERO SECTION
-   -------------------------------------------------------------------------- */
+/* 5. HERO SECTION */
 #hero {
   position: relative;
   min-height: 90vh;
@@ -355,8 +342,8 @@ button:focus-visible {
   inset: 0;
   z-index: 1;
   background:
-    radial-gradient(circle at 88% 12%, rgba(193, 80, 46, 0.28), transparent 42%),
-    linear-gradient(180deg, rgba(18, 32, 44, 0.58) 0%, rgba(18, 32, 44, 0.74) 55%, rgba(18, 32, 44, 0.9) 100%);
+  radial-gradient(circle at 88% 12%, rgba(193, 80, 46, 0.28), transparent 42%),
+  linear-gradient(180deg, rgba(18, 32, 44, 0.58) 0%, rgba(18, 32, 44, 0.74) 55%, rgba(18, 32, 44, 0.9) 100%);
 }
 
 .hero-content {
@@ -470,9 +457,7 @@ button:focus-visible {
   font-size: 0.72rem;
 }
 
-/* --------------------------------------------------------------------------
-   5b. FEATURES
-   -------------------------------------------------------------------------- */
+/* 5b. FEATURES */
 #features {
   padding-block: var(--space-xl);
 }
@@ -527,12 +512,7 @@ button:focus-visible {
   color: var(--color-navy-soft);
 }
 
-/* --------------------------------------------------------------------------
-   6. MENU SECTION
-   Foto menu diberi cincin dua-warna (terracotta + sand) — proporsi & susunan
-   warnanya sengaja meniru potongan matahari pada logo, jadi tiap kartu menu
-   membawa identitas merek tanpa perlu elemen dekoratif tambahan.
-   -------------------------------------------------------------------------- */
+/* 6. MENU SECTION */
 #menu {
   padding-block: var(--space-xl);
 }
@@ -609,12 +589,7 @@ button:focus-visible {
   margin-inline: auto;
 }
 
-/* --------------------------------------------------------------------------
-   7. ABOUT / FILOSOFI
-   Signature visual utama halaman: matahari terracotta yang separuh tertutup
-   gelombang krem, persis komposisi logogram — dipakai satu kali saja di sini
-   supaya jadi elemen yang benar-benar diingat.
-   -------------------------------------------------------------------------- */
+/* 7. ABOUT / FILOSOFI */
 #about {
   position: relative;
   overflow: hidden;
@@ -673,9 +648,7 @@ button:focus-visible {
   font-size: 1.05rem;
 }
 
-/* --------------------------------------------------------------------------
-   8. TESTIMONI + INSTAGRAM
-   -------------------------------------------------------------------------- */
+/* 8. TESTIMONI + INSTAGRAM */
 #testimoni {
   padding-block: var(--space-xl);
   text-align: center;
@@ -740,9 +713,7 @@ blockquote footer {
   border-radius: var(--radius-md);
 }
 
-/* --------------------------------------------------------------------------
-   9. LOCATION
-   -------------------------------------------------------------------------- */
+/* 9. LOCATION */
 #location {
   padding-block: var(--space-xl);
 }
@@ -814,9 +785,7 @@ blockquote footer {
   margin-top: var(--space-lg);
 }
 
-/* --------------------------------------------------------------------------
-   10. FOOTER
-   -------------------------------------------------------------------------- */
+/* 10. FOOTER */
 .site-footer {
   background-color: var(--color-navy);
   color: var(--color-sand-soft);
@@ -999,9 +968,225 @@ blockquote footer {
   }
 }
 
-/* --------------------------------------------------------------------------
-   11. RESPONSIVITAS
-   -------------------------------------------------------------------------- */
+/* 11. MENU PAGE (CATALOG) */
+.page-heading {
+  margin-top: 6.5rem;
+  text-align: center;
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.page-heading .eyebrow {
+  justify-content: center;
+  margin-bottom: var(--space-xs);
+}
+
+.page-heading h1 {
+  font-size: clamp(2rem, 3vw + 1.2rem, 3.2rem);
+  margin-bottom: var(--space-xs);
+}
+
+.page-heading p {
+  font-weight: 300;
+  max-width: 46ch;
+  margin-inline: auto;
+}
+
+/* Filter chips */
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: var(--space-lg) 0;
+}
+
+.filter-chip {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 9px 20px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-line-strong);
+  color: var(--color-navy-soft);
+  background-color: var(--color-surface);
+  transition: background-color 0.2s var(--ease), border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+
+.filter-chip:hover {
+  border-color: var(--color-terracotta);
+  color: var(--color-terracotta-dark);
+}
+
+.filter-chip.is-active {
+  background-color: var(--color-terracotta);
+  border-color: var(--color-terracotta);
+  color: var(--color-surface);
+}
+
+/* Catalog grid + cards */
+#full-menu {
+  padding-bottom: var(--space-xl);
+}
+
+.menu-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.menu-item-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  transform: translateY(14px);
+  animation: menuCardIn 0.5s var(--ease) forwards;
+  transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.menu-item-card:hover {
+  border-color: var(--color-terracotta-soft);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+}
+
+.menu-item-card:nth-child(3n+1) { animation-delay: 0.02s; }
+.menu-item-card:nth-child(3n+2) { animation-delay: 0.1s; }
+.menu-item-card:nth-child(3n+3) { animation-delay: 0.18s; }
+
+@keyframes menuCardIn {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.menu-item-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+}
+
+.menu-item-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-item-card__tag {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-surface);
+  background-color: rgba(18, 32, 44, 0.42);
+  border: 1px solid rgba(251, 248, 241, 0.28);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 5px 12px;
+  border-radius: var(--radius-pill);
+}
+
+.menu-item-card__body {
+  padding: var(--space-sm) var(--space-sm) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.menu-item-card__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-3xs);
+}
+
+.menu-item-card__head h3 {
+  font-size: var(--fs-h3);
+  color: var(--color-ink);
+}
+
+.menu-item-card__body p:not(.menu-price) {
+  font-size: var(--fs-small);
+  font-weight: 300;
+  color: var(--color-navy-soft);
+  margin-bottom: var(--space-sm);
+}
+
+.menu-item-card .menu-price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--color-terracotta-dark);
+  font-size: 0.98rem;
+  white-space: nowrap;
+}
+
+.menu-item-card .btn-sl {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+/* Empty state */
+.menu-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  background-color: var(--color-surface);
+  border: 1px dashed var(--color-line-strong);
+  border-radius: var(--radius-lg);
+}
+
+.menu-empty__icon {
+  width: 56px;
+  height: 56px;
+  margin-inline: auto;
+  margin-bottom: var(--space-sm);
+  border-radius: 50%;
+  background-color: var(--color-sand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-empty__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.menu-empty__icon svg path {
+  fill: var(--color-terracotta-dark);
+}
+
+.menu-empty p {
+  font-weight: 300;
+  color: var(--color-navy-soft);
+}
+
+@media (max-width: 992px) {
+  .menu-catalog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .menu-catalog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-heading {
+    margin-top: 5.5rem;
+  }
+}
+
+/* 12. RESPONSIVITAS */
 @media (max-width: 992px) {
   .menu-grid {
     grid-template-columns: repeat(2, 1fr);

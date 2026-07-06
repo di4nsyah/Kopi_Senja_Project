@@ -11,10 +11,10 @@
     </button>
 
     <nav class="navbar__links" id="navLinks">
-        <a href="#hero">Beranda</a>
-        <a href="#menu">Menu</a>
-        <a href="#about">Tentang</a>
-        <a href="#testimoni">Testimoni</a>
-        <a href="#location">Lokasi</a>
+        <a href="index.php">Beranda</a>
+        <a href="menu.php">Menu</a>
+        <a href="index.php#about">Tentang</a>
+        <a href="index.php#testimoni">Testimoni</a>
+        <a href="index.php#location">Lokasi</a>
     </nav>
 </header>
