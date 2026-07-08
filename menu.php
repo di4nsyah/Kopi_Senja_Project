@@ -65,7 +65,7 @@ $kategori_list = [
                                     <span class="menu-price">Rp <?php echo number_format($row['harga'], 0, ',', '.'); ?></span>
                                 </div>
                                 <p><?php echo htmlspecialchars($row['deskripsi']); ?></p>
-                                <a href="order.php?id=<?php echo $row['id']; ?>" class="btn-sl">Pesan Sekarang</a>
+                                <button onclick="addToCart(<?php echo $row['id']; ?>, '<?php echo $row['nama_item']; ?>', <?php echo $row['harga']; ?>)" class="btn-sl">Pesan</button>
                             </div>
                         </article>
                     <?php }
@@ -82,5 +82,18 @@ $kategori_list = [
             </div>
         </div>
     </section>
+    <!-- Sidebar Keranjang -->
+<div id="cart-sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <h2>Pesanan Anda</h2>
+        <button onclick="closeCart()" class="close-btn">x</button>
+    </div>
+    <div id="cart-items"></div> <div class="cart-total">
+        <strong>Total: <span id="cart-total-price">Rp 0</span></strong>
+    </div>
+    <a href="checkout.php" class="btn-checkout">Bayar Sekarang</a>
+</div>
+<script src="assets/js/cart.js"></script>
+<script src="assets/js/cart.js"></script>
 </body>
 </html>

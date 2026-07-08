@@ -112,14 +112,14 @@ require_once 'config/db.php';
             
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) { ?>
-                        <article class="menu-card"> <img src="assets/img/<?php echo $row['gambar']; ?>" alt="<?php echo htmlspecialchars($row['nama_item']); ?>">
+                        <article class="menu-card"> <img src="assets/menu/<?php echo $row['gambar']; ?>" alt="<?php echo htmlspecialchars($row['nama_item']); ?>">
                             
                             <h3><?php echo htmlspecialchars($row['nama_item']); ?></h3>
                             <p><?php echo htmlspecialchars($row['deskripsi']); ?></p>
                             
                             <p class="menu-price">Rp <?php echo number_format($row['harga'], 0, ',', '.'); ?></p>
                             
-                            <a href="order.php?id=<?php echo $row['id']; ?>" class="btn-sl">Pesan</a>
+                            <a href="menu.php?id=<?php echo $row['id']; ?>" class="btn-sl">Pesan</a>
                         </article>
                     <?php } 
                 } else {
